@@ -1,9 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Página Web de prueba</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSP 3000 - Menú Personalizado</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hola, soy Angel (AceRevo)</h1>
+    <!-- Efecto de partículas para el fondo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Contenedor principal de la PSP -->
+    <div class="psp-container">
+        <!-- Barra superior con nombre personalizado -->
+        <div class="top-bar">
+            <div class="user-name">Bienvenido, <span id="custom-name">[Tu Nombre]</span></div>
+            <div class="status-bar">
+                <img src="batteria.png" class="status-icon" alt="Batería">
+                <img src="wifi.png" class="status-icon" alt="WiFi">
+                <img src="bluetooth.png" class="status-icon" alt="Bluetooth">
+                <span id="current-time">12:30 PM</span>
+            </div>
+        </div>
+        
+        <!-- Menú principal -->
+        <div class="main-menu">
+            <div class="menu-title">Menú Principal</div>
+            
+            <div class="menu-items">
+                <!-- Ítem 1: Juegos -->
+                <div class="menu-item selected glow-effect" data-target="games">
+                    <img src="juegos.png" class="menu-icon" alt="Juegos">
+                    <div class="menu-label">Juegos</div>
+                </div>
+                
+                <!-- Ítem 2: Música -->
+                <div class="menu-item" data-target="music">
+                    <img src="musica.png" class="menu-icon" alt="Música">
+                    <div class="menu-label">Música</div>
+                </div>
+                
+                <!-- Ítem 3: Fotos -->
+                <div class="menu-item" data-target="photos">
+                    <img src="fotos.png" class="menu-icon" alt="Fotos">
+                    <div class="menu-label">Fotos</div>
+                </div>
+                
+                <!-- Ítem 4: Videos -->
+                <div class="menu-item" data-target="videos">
+                    <img src="videos.png" class="menu-icon" alt="Videos">
+                    <div class="menu-label">Videos</div>
+                </div>
+                
+                <!-- Ítem 5: Internet -->
+                <div class="menu-item" data-target="internet">
+                    <img src="internet.png" class="menu-icon" alt="Internet">
+                    <div class="menu-label">Internet</div>
+                </div>
+                
+                <!-- Ítem 6: Configuración -->
+                <div class="menu-item" data-target="settings">
+                    <img src="ajustes.png" class="menu-icon" alt="Configuración">
+                    <div class="menu-label">Configuración</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Barra inferior con controles -->
+        <div class="bottom-bar">
+            <div class="action-button" id="back-btn">
+                <img src="equis.png" class="button-icon" alt="Atrás">
+                <span>Volver</span>
+            </div>
+            <div class="action-button" id="select-btn">
+                <span>Seleccionar</span>
+                <img src="circulo.png" class="button-icon" alt="Seleccionar">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
